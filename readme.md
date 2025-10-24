@@ -14,4 +14,6 @@ de las salas y laboratorios del **Colegio Andes del Sur**.
 Para acceder, dirígete a
 http://127.0.0.1:8000/admin
 
-e inicia sesión con tu superusuario.
+e inicia sesión con: 
+usuario: mantenedor
+contraseña: admin123
