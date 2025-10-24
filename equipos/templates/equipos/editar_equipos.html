@@ -1,0 +1,13 @@
+{% extends 'equipos/base.html' %}
+{% block contenido %}
+<h2>Editar equipo</h2>
+<form method="post">
+    {% csrf_token %}
+    <label>Nombre:</label><input type="text" name="nombre" value="{{ equipo.nombre }}"><br>
+    <label>Categoría:</label><input type="text" name="categoria" value="{{ equipo.categoria }}"><br>
+    <label>Estado:</label><input type="text" name="estado" value="{{ equipo.estado }}"><br>
+    <label>Fecha ingreso:</label><input type="date" name="fecha_ingreso" value="{{ equipo.fecha_ingreso }}"><br>
+    <label>Ubicación:</label><input type="text" name="ubicacion" value="{{ equipo.ubicacion }}"><br>
+    <button type="submit">Actualizar</button>
+</form>
+{% endblock %}

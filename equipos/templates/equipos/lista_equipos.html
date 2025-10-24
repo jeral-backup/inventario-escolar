@@ -1,0 +1,30 @@
+{% extends 'equipos/base.html' %}
+{% block contenido %}
+<h2>Listado de Equipos</h2>
+<table>
+    <tr>
+        <th>Nombre</th>
+        <th>Categoría</th>
+        <th>Estado</th>
+        <th>Fecha de Ingreso</th>
+        <th>Ubicación</th>
+        <th>Acciones</th>
+    </tr>
+    {% for e in equipos %}
+    <tr>
+        <td>{{ e.nombre }}</td>
+        <td>{{ e.categoria }}</td>
+        <td>{{ e.estado }}</td>
+        <td>{{ e.fecha_ingreso }}</td>
+        <td>{{ e.ubicacion }}</td>
+        <td>
+            <a href="{% url 'detalle_equipo' e.id %}">Ver</a> |
+            <a href="{% url 'editar_equipo' e.id %}">Editar</a> |
+            <a href="{% url 'eliminar_equipo' e.id %}">Eliminar</a>
+        </td>
+    </tr>
+    {% empty %}
+    <tr><td colspan="6">No hay equipos registrados.</td></tr>
+    {% endfor %}
+</table>
+{% endblock %}

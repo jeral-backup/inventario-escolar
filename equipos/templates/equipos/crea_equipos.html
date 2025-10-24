@@ -1,0 +1,13 @@
+{% extends 'equipos/base.html' %}
+{% block contenido %}
+<h2>Agregar nuevo equipo</h2>
+<form method="post">
+    {% csrf_token %}
+    <label>Nombre:</label><input type="text" name="nombre"><br>
+    <label>Categoría:</label><input type="text" name="categoria"><br>
+    <label>Estado:</label><input type="text" name="estado"><br>
+    <label>Fecha ingreso:</label><input type="date" name="fecha_ingreso"><br>
+    <label>Ubicación:</label><input type="text" name="ubicacion"><br>
+    <button type="submit">Guardar</button>
+</form>
+{% endblock %}

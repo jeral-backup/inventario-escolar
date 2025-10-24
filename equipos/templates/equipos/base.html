@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Inventario Escolar</title>
+    <link rel="stylesheet" href="{% static 'css/estilos.css' %}">
+</head>
+<body>
+    <header>
+        <h1>Inventario Escolar</h1>
+        <nav>
+            <a href="{% url 'lista_equipos' %}">Inicio</a>
+            <a href="{% url 'crear_equipo' %}">Agregar Equipo</a>
+            <a href="/admin/">Admin</a>
+        </nav>
+    </header>
+
+    <main>
+        {% block contenido %}{% endblock %}
+    </main>
+
+    <footer>
+        <p>Colegio Andes del Sur © 2025</p>
+    </footer>
+</body>
+</html>

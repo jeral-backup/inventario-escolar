@@ -1,0 +1,10 @@
+{% extends 'equipos/base.html' %}
+{% block contenido %}
+<h2>Detalle del Equipo</h2>
+<p><strong>Nombre:</strong> {{ equipo.nombre }}</p>
+<p><strong>Categoría:</strong> {{ equipo.categoria }}</p>
+<p><strong>Estado:</strong> {{ equipo.estado }}</p>
+<p><strong>Fecha de ingreso:</strong> {{ equipo.fecha_ingreso }}</p>
+<p><strong>Ubicación:</strong> {{ equipo.ubicacion }}</p>
+<a href="{% url 'lista_equipos' %}">Volver</a>
+{% endblock %}
