@@ -11,3 +11,7 @@ de las salas y laboratorios del **Colegio Andes del Sur**.
 2. Crear un entorno virtual e instalar Django:
    ```bash
    pip install django
+Para acceder, dirígete a
+http://127.0.0.1:8000/admin
+
+e inicia sesión con tu superusuario.
